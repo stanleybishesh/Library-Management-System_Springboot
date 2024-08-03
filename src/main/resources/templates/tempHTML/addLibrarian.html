@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Add Librarian</title>
+    <style>
+        form {
+            display: inline-block;
+            border: 1px dashed black;
+            padding: 10px;
+            background: linear-gradient(to bottom, #ffffff, #f0f0f0); /* Example gradient colors */
+        }
+
+        input {
+            padding: 5px;
+        }
+
+        label {
+            padding: 5px;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+<h1>Add Librarian</h1>
+<form th:action="@{/submitLibrarian}" th:object="${librarian}" method="post" enctype="multipart/form-data">
+<!--    <label for="id">ID</label>-->
+<!--    <input type="hidden" id="id" name="id" th:value="${librarian?.id}">-->
+    <input type="hidden" id="id" name="id" th:value="${librarian?.id}">
+    <label for="name">Name</label><br>
+    <input type="text" id="name" name="name" th:value="${librarian?.name}"><br>
+    <label for="address">Address</label><br>
+    <input type="text" id="address" name="address" th:value="${librarian?.address}">
+    <label for="contact">Contact</label><br>
+    <input type="tel" id="contact" name="contact" th:value="${librarian?.contact}"><br>
+    <label for="librarianURL">Upload Profile Image</label><br>
+    <input type="file" name="librarianURL" id="librarianURL" required><br><br>
+    <input type="submit" value="Add Librarian">
+</form>
+</body>
+</html>

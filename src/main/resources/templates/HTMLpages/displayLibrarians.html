@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+        table {
+            width: 84%;
+            border-collapse: collapse;
+            margin-left: 240px;
+            margin-top: 30px;
+        }
+        a:hover{
+            cursor: pointer;
+            color: red;
+        }
+        th,
+        td {
+            border: 1px solid #4646464d;
+            padding: 8px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #464646a1;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="sidebar">
+        <header>Hello, Admin</header>
+        <a href="dashboard">
+            <!--            <i class="fas fa-qrcode"></i>-->
+            <span>Dashboard</span>
+        </a>
+        <a href="addBook">
+            <!--            <i class="fa-solid fa-book"></i>-->
+            <span>Add Books</span>
+        </a>
+        <a href="addStudent">
+            <!--            <i class="fa-solid fa-person"></i>-->
+            <span>Add Students</span>
+        </a>
+        <a href="addLibrarian">
+            <!--            <i class="fa-solid fa-book-open-reader"></i>-->
+            <span>Add Librarians</span>
+        </a>
+        <a href="displayBooks">
+            <!--            <i class="fa-solid fa-book-open"></i>-->
+            <span>View Books</span>
+        </a>
+        <a href="displayStudents">
+            <!--            <i class="fa-solid fa-users"></i>-->
+            <span>View Students</span>
+        </a>
+        <a href="displayLibrarians" class="active">
+            <!--            <i class="fa-solid fa-users-line"></i>-->
+            <span>View Librarians</span>
+        </a>
+
+    </div>
+
+    <div class="flex min-h-full flex-col  px-6 py-12 pt-0 lg:px-8">
+        <div class="sm:mx-auto sm:w-full sm:max-w-sm">
+            <h2 class="mt-10 text-center text-4xl font-bold leading-9 tracking-tight text-gray-900">List of Librarians
+            </h2>
+        </div>
+
+        <table class="table-auto">
+            <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Address</th>
+                <th>Contact</th>
+                <th>File</th>
+                <th colspan="2">Action</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="librarian : ${librarians}">
+                <td th:text="${librarian.id}"></td>
+                <td th:text="${librarian.name}"></td>
+                <td th:text="${librarian.address}"></td>
+                <td th:text="${librarian.contact}"></td>
+                <td><img th:src="@{../../../../uploads/IMG_20211216_104456.jpg}"></td>
+                <td><a th:href="@{/editLibrarian/{id}(id=${librarian.id})}">Edit</a></td>
+                <td><a th:href="@{/deleteLibrarian/{id}(id=${librarian.id})}">Delete</a></td>
+            </tr>
+            <!-- Add more rows as needed -->
+            </tbody>
+        </table>
+    </div>
+</body>
+
+</html>

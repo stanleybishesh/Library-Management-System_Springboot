@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        table {
+            width: 84%;
+            border-collapse: collapse;
+            margin-left: 240px;
+            margin-top: 30px;
+        }
+
+        a:hover {
+            cursor: pointer;
+            color: red;
+        }
+
+        th,
+        td {
+            border: 1px solid #4646464d;
+            padding: 8px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #464646a1;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="sidebar">
+        <header>Hello, Admin</header>
+        <a href="dashboard">
+            <!--            <i class="fas fa-qrcode"></i>-->
+            <span>Dashboard</span>
+        </a>
+        <a href="books">
+            <!--            <i class="fa-solid fa-book"></i>-->
+            <span>Books</span>
+        </a>
+        <a href="students" class="active">
+            <!--            <i class="fa-solid fa-person"></i>-->
+            <span>Students</span>
+        </a>
+        <a href="librarians">
+            <!--            <i class="fa-solid fa-book-open-reader"></i>-->
+            <span>Librarians</span>
+        </a>
+        <a href="records">
+            <!--            <i class="fa-solid fa-book-open"></i>-->
+            <span>Records</span>
+        </a>
+<!--        <a href="displayStudents">-->
+<!--            &lt;!&ndash;            <i class="fa-solid fa-users"></i>&ndash;&gt;-->
+<!--            <span>View Students</span>-->
+<!--        </a>-->
+<!--        <a href="displayLibrarians">-->
+<!--            &lt;!&ndash;            <i class="fa-solid fa-users-line"></i>&ndash;&gt;-->
+<!--            <span>View Librarians</span>-->
+<!--        </a>-->
+
+    </div>
+
+    <div class="flex min-h-full flex-col justify-center px-6 py-12 pt-0 lg:px-8">
+        <div class="sm:mx-auto sm:w-full sm:max-w-sm">
+            <img class="mx-auto h-10 w-auto" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
+                alt="Your Company">
+            <h2 class="mt-10 text-center text-4xl font-bold leading-9 tracking-tight text-gray-900">Add New Student
+            </h2>
+        </div>
+
+        <div class="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
+            <form class="space-y-6" th:action="@{/submitStudent}" th:object="${student}" method="post" enctype="multipart/form-data">
+                <input type="hidden" id="id" name="id" th:value="${librarian?.id}">
+                <div>
+                    <label for="name" class="block text-sm font-medium leading-6 text-gray-900">Name of Student
+                    </label>
+                    <div class="mt-2">
+                        <input id="name" name="name" type="text" required
+                            class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                               th:value="${student?.name}"/>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="flex items-center justify-between">
+                        <label for="address" class="block text-sm font-medium leading-6 text-gray-900">Address</label>
+
+                    </div>
+                    <div class="mt-2">
+                        <input id="address" name="address" type="text" required
+                            class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                               th:value="${student?.address}"/>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="flex items-center justify-between">
+                        <label for="contact" class="block text-sm font-medium leading-6 text-gray-900">Contact</label>
+
+                    </div>
+                    <div class="mt-2">
+                        <input id="contact" name="contact" type="tel" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                               th:value="${student?.contact}"/>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="flex items-center justify-between">
+                        <label for="studentURL" class="block text-sm font-medium leading-6 text-gray-900">Upload Profile Image</label>
+
+                    </div>
+                    <div class="mt-2">
+                        <input id="studentURL" name="studentURL" type="file" class="block w-full text-sm text-slate-500
+                        file:mr-4 file:py-2 file:px-4
+                        file:rounded-full file:border-0
+                        file:text-sm file:font-semibold
+                        file:bg-violet-50 file:text-violet-700
+                        hover:file:bg-violet-100
+                      " />
+                    </div>
+                </div>
+
+                <div>
+                    <button type="submit"
+                        class="flex w-full justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Add
+                        Student
+                    </button>
+                </div>
+            </form>
+
+
+        </div>
+    </div>
+    <div class="flex min-h-full flex-col  px-6 py-12 pt-0 lg:px-8">
+        <div class="sm:mx-auto sm:w-full sm:max-w-sm">
+            <h2 class="mt-10 text-center text-4xl font-bold leading-9 tracking-tight text-gray-900">List of Students
+            </h2>
+        </div>
+
+        <table class="table-auto">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Address</th>
+                    <th>Contact</th>
+                    <th>File</th>
+                    <th colspan="2">Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="student : ${students}">
+                    <td th:text="${student.id}"></td>
+                    <td th:text="${student.name}"></td>
+                    <td th:text="${student.address}"></td>
+                    <td th:text="${student.contact}"></td>
+                    <td><img th:src="@{../../../../uploads/IMG_20211216_104456.jpg}"></td>
+                    <td><a th:href="@{/editStudent/{id}(id=${student.id})}">Edit</a></td>
+                    <td><a th:href="@{/deleteStudent/{id}(id=${student.id})}">Delete</a></td>
+                </tr>
+                <!-- Add more rows as needed -->
+            </tbody>
+        </table>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>List of Students</title>
+  <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: center;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+
+<h2>List of Students</h2>
+
+<table>
+  <thead>
+  <tr>
+    <th>ID</th>
+    <th>Name</th>
+    <th>Address</th>
+    <th>Contact</th>
+    <th colspan="2">Action</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr th:each="student : ${students}">
+    <td th:text="${student.id}"></td>
+    <td th:text="${student.name}"></td>
+    <td th:text="${student.address}"></td>
+    <td th:text="${student.contact}"></td>
+    <td><a th:href="@{/editStudent/{id}(id=${student.id})}">Edit</a></td>
+    <td><a th:href="@{/deleteStudent/{id}(id=${student.id})}">Delete</a></td>
+  </tr>
+  <!-- Add more rows as needed -->
+  </tbody>
+</table>
+
+</body>
+</html>

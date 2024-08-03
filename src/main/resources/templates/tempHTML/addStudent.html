@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Add Student</title>
+    <style>
+        form {
+            display: inline-block;
+            border: 1px dashed black;
+            padding: 10px;
+            background: linear-gradient(to bottom, #ffffff, #f0f0f0); /* Example gradient colors */
+        }
+
+        input {
+            padding: 5px;
+        }
+
+        label {
+            padding: 5px;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+<h1>Add Student</h1>
+<form th:action="@{/submitStudent}" th:object="${student}" method="post" enctype="multipart/form-data">
+<!--    <label for="id">ID</label>-->
+<!--    <input type="hidden" id="id" name="id" th:value="${student?.id}">-->
+    <input type="hidden" id="id" name="id" th:value="${student?.id}">
+    <label for="name">Name</label><br>
+    <input type="text" id="name" name="name" th:value="${student?.name}"><br>
+    <label for="address">Address</label><br>
+    <input type="text" id="address" name="address" th:value="${student?.address}">
+    <label for="contact">Contact</label><br>
+    <input type="tel" id="contact" name="contact" th:value="${student?.contact}"><br>
+    <label for="studentURL">Upload Profile Image</label><br>
+    <input type="file" name="studentURL" id="studentURl" required><br><br>
+    <input type="submit" value="Add Student">
+</form>
+</body>
+</html>

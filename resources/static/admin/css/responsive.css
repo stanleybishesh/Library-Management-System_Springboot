@@ -1,0 +1,86 @@
+@media only screen and (min-width: 1200px) and (max-width: 1350px) {
+    .sidebar-menu {
+        width: 16rem;
+    }
+}
+
+@media (max-width: 1200px) {
+    .sidebar-menu{
+        width: 3.75rem;
+        overflow: visible;
+    }
+    .sidebar-menu .box-title .nav-text {
+        display: none;
+    }
+    .sidebar-menu .box-title:hover .nav-text{
+        position: absolute;
+        left: 60px;
+        top: 7px;
+        width: 200px;
+        background: var(--light-purple);
+        padding: 15px;
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+        color: #000;
+        display: block !important;
+    }
+    .sidebar-menu .box-title:hover ~ .box-content li {
+        margin-left: -5px;
+    }
+    .sidebar-menu .box-title:hover ~ .box-content,
+    .sidebar-menu .box-content:hover{
+        position: absolute;
+        left: 60px;
+        top: 0px;
+        width: 200px;
+        background: var(--light-purple);
+        padding: 20px;
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+        color: #000;
+        display: block !important;
+    }
+    .sidebar-menu .box-content:hover ~ .box-title {
+        background: var(--light-purple);
+    }
+    .sidebar-menu .box-title:hover ~ .box-content .heading,
+    .sidebar-menu .box-content:hover .heading{
+        display: block;
+        font-size: 14px;
+        color: #102fa3;
+    }
+
+    .sidebar-menu input:checked + .box .box-content,
+    input:checked + .box .box-close {
+        display: none;
+    }
+    .sidebar-menu  .arrows section .box-title:before {
+        display:none;
+    }
+}
+
+@media (max-width: 991px) {
+  #home-page .card-body .graph-wrapper {
+    width: 80%;
+  }
+  .content-body{
+      margin-left: 3.75rem;
+  }
+  .footer {
+    padding-left: 3.75rem;
+  }
+}
+@media (max-width: 768px) {
+  .header-right .nav-item .nav-link {
+    margin-right: -10px;
+  }
+  #home-page .card-body .graph-wrapper {
+    width: 60%;
+  }
+}
+@media (max-width: 500px) {
+  #home-page .card-body .graph-wrapper {
+    width: 80%;
+  }
+}
+/*# sourceMappingURL=responsive.css.map */

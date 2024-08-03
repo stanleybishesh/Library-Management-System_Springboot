@@ -1,0 +1,438 @@
+/**
+ * Created by Anu Ganesh
+*/
+/*1600px*/
+@media all and (max-width: 100em) {
+    /*------------------------------------ Site Wide Starts -----------------------------------*/
+    /*------------------------------------- Site Wide Ends ------------------------------------*/
+    /*--------------------------------- Header Wrapper Starts ---------------------------------*/
+    /*--------------------------------- Header Wrapper Starts ---------------------------------*/
+    /*-------------------------------- Content Wrapper Starts ---------------------------------*/
+    /*--------------------------------- Content Wrapper Ends ----------------------------------*/
+    /*--------------------------------- Footer Wrapper Starts ---------------------------------*/
+    /*---------------------------------- Footer Wrapper Ends ----------------------------------*/
+    /*----------------------------------- Components Starts -----------------------------------*/
+    /*------------------------------------ Components Ends ------------------------------------*/
+    /*---------------------------------- Slick Slider Starts ----------------------------------*/
+    /*----------------------------------- Slick Slider Ends -----------------------------------*/
+    /*------------------------------------- Mcustom Starts ------------------------------------*/
+    /*-------------------------------------- Mcustom Ends -------------------------------------*/
+}
+
+/*Tab-landscape- 1200px*/
+@media all and (max-width: 75em) {
+
+    .main-section {
+        padding: 10px 60px;
+    }
+
+    .top-header .wrapper {
+        padding: 0px 60px;
+    }
+
+    .main-header-wrapper {
+        padding: 18px 60px;
+    }
+
+    #header-wrapper .header-container .news-slider-wrapper {
+        padding: 0 60px;
+    }
+
+    .navigation-wrapper {
+        padding: 0px 46px;
+    }
+
+    .navigation-wrapper ul {
+        width: 100%
+    }
+
+    /*Search Case Section Starts*/
+    .search-case-section .section-content-wrapper {
+        padding: 20px 40px;
+    }
+
+
+    /*Search Case Section Ends*/
+    .breadcrumbs-section .breadcrumb {
+        padding: 10px 0;
+    }
+
+    .search-case-section, #ujuriko-awastha-page .search-ujuri-section {
+        margin: 30px 0;
+    }
+
+    .profile-section .profile-section-wrapper .profile-item {
+        flex: 1 0 47%;
+    }
+}
+
+/*Tab-portrait- 900px*/
+@media all and (max-width: 56.25em) {
+
+    .main-section {
+        padding: 10px 40px;
+    }
+
+    .top-header .wrapper {
+        padding: 0px 40px;
+    }
+
+    .main-header-wrapper {
+        padding: 18px 40px;
+    }
+
+    #header-wrapper .header-container .news-slider-wrapper {
+        padding: 0 40px;
+    }
+
+    .navigation-wrapper {
+        padding: 0px 26px;
+    }
+
+    .search-case-section .section-content-container {
+        flex-wrap: wrap;
+    }
+
+    .search-case-section .section-content-container .section-content-item {
+        flex: 1 0 30%;
+    }
+
+    .search-case-section button {
+        margin: 0;
+    }
+
+    .breadcrumbs-section .breadcrumb {
+        padding: 10px 0;
+    }
+
+    .search-case-section, #ujuriko-awastha-page .search-ujuri-section {
+        margin: 30px 0;
+    }
+
+    /* Styles for niyam page starts */
+    #niyam-page .niyam-section .btn {
+        width: 100%;
+    }
+
+    /* Styles for niyam page ends */
+
+    #online-case-registration-page .terms-content .terms-content-wrapper {
+        width: 80%;
+    }
+}
+
+/*Phone- 768px*/
+@media all and (max-width: 48em) {
+
+    .main-section {
+        padding: 10px 15px;
+    }
+
+    .top-header .wrapper {
+        padding: 0px 20px;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .top-header .wrapper .date {
+        flex-basis: 100%;
+        text-align: center;
+        margin-left: 20px;
+    }
+
+    .top-header .wrapper .tag-line {
+        display: none;
+    }
+
+    .top-header .wrapper a.login-btn {
+        margin-inline: auto;
+    }
+
+    .top-header .wrapper .date span iframe html {
+        text-align: center;
+    }
+
+    .main-header-wrapper {
+        padding: 18px 20px;
+    }
+
+    .main-header-wrapper .main-header-container {
+        margin-top: 30px;
+        flex-wrap: wrap;
+    }
+
+    .main-header-wrapper .main-header-container .logo-title-wrapper {
+        flex-direction: column;
+        flex-basis: 100%;
+        gap: 10px;
+    }
+
+    .main-header-wrapper .main-header-container .logo-title-wrapper .logo-container {
+        width: 80px;
+        margin-inline: auto;
+    }
+
+    .main-header-wrapper .main-header-container .logo-title-wrapper .title-container {
+        flex-basis: 100%;
+        text-align: center;
+    }
+
+    .main-header-wrapper .main-header-container .logo-title-wrapper .title-container h1,
+    .main-header-wrapper .main-header-container .logo-title-wrapper .title-container h1 span {
+        font-size: 18px;
+    }
+
+    .main-header-wrapper .main-header-container .flag-wrapper {
+        display: none;
+    }
+
+    #header-wrapper .header-container .news-slider-wrapper {
+        padding: 0 20px;
+    }
+
+    .navigation-wrapper {
+        padding: 0px 20px;
+    }
+
+    .breadcrumbs-section .breadcrumb li,
+    .breadcrumbs-section .breadcrumb li a {
+        font-size: 15px;
+    }
+
+    .search-case-section {
+        margin: 30px 0;
+        padding: 30px 20px;
+    }
+
+    .search-case-section .section-content-wrapper {
+        padding: 10px 0px;
+    }
+
+    /*.search-case-section .section-content-container {*/
+    /*    gap: 0;*/
+    /*}*/
+
+    .search-case-section .section-content-container .section-content-item {
+        flex-basis: 100%;
+    }
+
+    .search-case-section .section-content-container .section-content-item input, .search-case-section .section-content-container .section-content-item select {
+        /*font-size: 14px;*/
+    }
+
+    .search-case-section .section-content-container button {
+        width: 100%;
+    }
+
+    .navigation-wrapper .mobile-menu {
+        display: block;
+    }
+
+    .navigation-wrapper ul {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        flex-direction: column;
+        background: #263a57;
+        display: none;
+    }
+
+
+    .navigation-wrapper ul li a:link,
+    .navigation-wrapper ul li a:visited {
+        color: white;
+        padding: 0 36px;
+    }
+
+    .navigation-wrapper ul.show {
+        display: block;
+    }
+
+    .main-section.hide {
+        opacity: 0;
+    }
+
+    #feedback-page .feedback-section {
+        width: 100%;
+        margin-top: 10px;
+        padding: 30px 15px;
+    }
+
+    #feedback-page .feedback-section .form-group .type-section {
+        display: flex;
+        gap: 23px;
+    }
+
+    .case-registration-option-section .upload-section-1 {
+        padding: 20px 20px 10px;
+    }
+
+    .case-registration-option-wrapper {
+        padding: 0;
+        max-width: 100%;
+    }
+
+    .case-registration-option-wrapper p {
+        font-size: 17px;
+        margin: 10px 0;
+    }
+
+    .case-registration-option-wrapper .info {
+        font-size: 15px;
+    }
+
+    .case-registration-option-wrapper .note {
+        font-size: 15px;
+        padding: 15px 20px;
+    }
+
+    .case-registration-option-wrapper .btn, .case-registration-option-wrapper .btn:link, .case-registration-option-wrapper .btn:visited {
+        font-size: 16px;
+    }
+
+    .breadcrumbs-section .breadcrumb {
+        padding: 10px 0;
+    }
+
+    .common-main-heading {
+        font-size: 24px;
+    }
+
+    #ujuriko-awastha-page .search-ujuri-section {
+        margin: 30px 0;
+    }
+
+    #ujuriko-awastha-page .search-ujuri-section .common-main-heading {
+        margin-bottom: 15px;
+    }
+
+    #ujuriko-awastha-page .search-ujuri-section input {
+        font-size: 14px;
+    }
+
+    #online-case-registration-page .terms-content .terms-content-wrapper {
+        width: 95%;
+        padding: 40px 15px;
+    }
+    .profile-section .profile-section-heading {
+        font-size: 18px;
+    }
+}
+
+/*Small Phone - 600px*/
+@media all and (max-width: 37.5em) {
+
+    .case-register-section {
+        background: #fff;
+        padding: 30px 12px;
+    }
+
+    .case-registration-option-section .upload-section-1 {
+        padding: 20px 10px 10px;
+    }
+
+    .case-registration-option-section .upload-section-1 h4 {
+        font-size: 14px;
+    }
+
+    .case-registration-option-section .upload-section-1 .file-upload-section {
+        padding: 20px 20px;
+        width: 100%;
+        margin: 0 0 25px;
+    }
+
+    .case-registration-option-section .upload-section-1 input {
+        margin: 20px 0 0 90px;
+        margin-inline: auto;
+    }
+
+    .case-registration-option-section .upload-section-1 input::after {
+        width: 100%;
+    }
+
+    .case-registration-option-section .upload-section-1 .ujuri-forms {
+        gap: 20px;
+        margin: 20px 0 20px;
+    }
+
+    .case-registration-option-section .upload-section-1 .ujuri-forms a {
+        width: 100%;
+    }
+
+    input[type='file'] {
+        width: 100%;
+    }
+
+    #ujuriko-awastha-page .search-ujuri-section {
+        display: block;
+    }
+
+    #ujuriko-awastha-page .search-ujuri-section .search-ujuri-wrapper {
+        padding: 0 0;
+    }
+
+    #ujuriko-awastha-page .search-ujuri-section .stepper-wrapper {
+        margin-top: 40px;
+    }
+
+    /*Styles for dastur page starts*/
+    .notice-section p {
+        font-size: 14px;
+    }
+
+    .dastur-section {
+        padding: 30px 0;
+    }
+
+    .case-info {
+        padding: 40px 15px;
+    }
+
+    #niyam-page .niyam-section {
+        padding: 30px 15px;
+    }
+
+
+    /*Styles for dastur page ends*/
+    /* Styles for niyam page starts */
+    /* Styles for niyam page ends */
+    /*Styles for login page starts*/
+    #login-page .main-section {
+        padding: 10px 10px;
+    }
+
+    #login-page .login-form-section {
+        padding: 20px 10px 30px;
+    }
+
+    #login-page .login-form-section .header-section {
+        left: 5%;
+        width: 90%;
+        margin-inline: auto;
+        padding: 20px 15px;
+        justify-content: center;
+        gap: 20px;
+        border-radius: 20px;
+    }
+
+    #login-page .login-form-section .header-section .left-content img {
+        width: 80px;
+    }
+
+    #login-page .login-form-section .header-section .right-content h3 {
+        font-size: 21px;
+        text-align: center;
+    }
+
+    #login-page .login-form-section .login-form h5 {
+        font-size: 16px;
+    }
+
+    /*Styles for login page ends*/
+    #hamro-barema-page .hamro-barema-section .hamro-barema-container p {
+        font-size: 17px;
+    }
+
+}
+
+/*# sourceMappingURL=responsive.css.map */

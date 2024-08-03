@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Add Book</title>
+    <style>
+        form {
+            display: inline-block;
+            border: 1px dashed black;
+            padding: 10px;
+            background: linear-gradient(to bottom, #ffffff, #f0f0f0); /* Example gradient colors */
+        }
+
+        input {
+            padding: 5px;
+        }
+
+        label {
+            padding: 5px;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <h1>Add Books</h1>
+    <form th:action="@{/submitBook}" th:object="${book}" method="post" enctype="multipart/form-data">
+        <input type="hidden" id="id" name="id" th:value="${book?.id}">
+        <label for="name">Name</label><br>
+        <input type="text" id="name" name="name" th:value="${book?.name}"><br>
+        <label for="author">Author</label><br>
+        <input type="text" id="author" name="author" th:value="${book?.author}"><br>
+        <label for="cover">Upload File</label><br>
+        <input type="file" name="cover" id="cover" required><br><br>
+        <input type="submit" value="Add Book">
+    </form>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>List of Librarians</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: center;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+
+<h2>List of Librarians</h2>
+
+<table>
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Address</th>
+        <th>Contact</th>
+        <th colspan="2">Action</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="librarian : ${librarians}">
+        <td th:text="${librarian.id}"></td>
+        <td th:text="${librarian.name}"></td>
+        <td th:text="${librarian.address}"></td>
+        <td th:text="${librarian.contact}"></td>
+        <td><a th:href="@{/editLibrarian/{id}(id=${librarian.id})}">Edit</a></td>
+        <td><a th:href="@{/deleteLibrarian/{id}(id=${librarian.id})}">Delete</a></td>
+    </tr>
+    <!-- Add more rows as needed -->
+    </tbody>
+</table>
+
+</body>
+</html>

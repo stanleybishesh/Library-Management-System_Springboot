@@ -1,0 +1,77 @@
+*{
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+
+body{
+  
+  
+  justify-content: center;
+   width: 100vw;
+  height: 100vh;
+  background-image: linear-gradient(-45deg, #ffffff 0%, #bebebe 100%);
+}
+
+.navbar{
+    top: 0px;
+    position:fixed;
+    background-color: blue;
+    display: flex;
+    width: 80%;
+}
+
+.sidebar{
+  position: fixed;
+  width: 240px;
+  left: 0px;
+  height: 100%;
+  background-color: #000000;
+  transition: all .5s ease;
+}
+
+.sidebar header{
+  font-size: 28px;
+  color: #f0f0f0;
+  line-height: 70px;
+  text-align: center;
+  background-color: #464646a1;
+  user-select: none;
+  font-family: 'Lato', sans-serif;
+}
+
+.sidebar a{
+  display: block;
+  height: 65px;
+  width: 100%;
+  color: #c4c4c4;
+  line-height: 65px;
+  padding-left: 30px;
+  box-sizing: border-box;
+  border-left: 5px solid transparent;
+  font-family: 'Lato', sans-serif;
+  transition: all .5s ease;
+}
+a.active,.sidebar a:hover{
+  border-left: 5px solid white;
+  color: #fff;
+}
+.sidebar a i{
+  font-size: 23px;
+  margin-right: 16px;
+}
+.sidebar a span{
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+/* Add Books,Students,Librarians */
+.content h1{
+  font-size: 50px;
+  padding-top: 20px;
+}
+
+.content input{
+  padding: 10px;
+  width: 100%;
+}

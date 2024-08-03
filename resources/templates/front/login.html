@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorate="~{front/layout/front-main}"
+>
+<head>
+    <meta charset="UTF-8">
+    <title>लगईन</title>
+
+    <style type="text/css">
+    </style>
+</head>
+<body>
+<div id="login-page" layout:fragment="content">
+    <div class="main-section">
+        <div class="main-section-wrapper">
+            <div class="login-form-section">
+                <div class="header-section">
+                    <div class="left-content">
+                        <img th:src="@{front/img/header/logo.png}" alt="">
+                    </div>
+                    <div class="right-content">
+                        <h3>LabSoft</h3>
+                    </div>
+                </div>
+                <form th:action="@{/login}" method="post" class="login-form">
+                    <div class="login-form-wrapper">
+                        <h4>You're welcome </h4>
+                        <h5>सेवा उपयोगका लागि प्रयोगकर्ता विवरण र पासवर्ड प्रयोग गरी लगइन गर्नुहोस् ।</h5>
+                        <div th:if="${param.error}" class="alert alert-danger" style="font-size: large;font-weight: bold">
+                            username or password incorrect
+                        </div>
+                        <input type="text" name="username" id="username" placeholder="प्रयोगकर्ता " required>
+                        <input type="password" name="password" id="password" placeholder="पासवर्ड " required>
+                        <button type="submit" class="common-case-btn">Sign in</button>
+                        <p>Forgot Password? <a href="#">click here</a></p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

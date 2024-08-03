@@ -1,0 +1,114 @@
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+
+*, body, button, input, textarea, select {
+    text-rendering: optimizeLegibility;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td {
+    margin:0;
+    padding:0;
+}
+
+table {
+    border-collapse:collapse;
+    border-spacing:0;
+}
+
+fieldset,img {
+    border:0;
+}
+
+address,caption,cite,code,dfn,em,strong,th,var {
+    font-style:normal;
+    font-weight:normal;
+}
+
+ol,ul {
+    list-style:none;
+}
+
+caption,th {
+    text-align:left;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    font-size:100%;
+    font-weight:normal;
+}
+
+q:before,q:after {
+    content:'';
+}
+
+abbr,acronym {
+    border: 0;
+}
+
+body {
+    font-family: sans-serif;
+    font-size: 16px;
+    line-height: 1.4;
+    padding: 2em;
+}
+
+.demo-example {
+    margin-bottom: 2em;
+}
+
+.demo-example > label {
+    display: block;
+    margin-bottom: 0.5em;
+    font-weight: bold;
+}
+
+.position-menu-within {
+    width: 18em;
+    height: 15em;
+    background: #eee;
+    overflow: auto;
+    padding: 2em 0 0 2em;
+}
+
+.modal-example .multi-select-menu {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-height: 50%;
+    min-width: 0;
+    overflow: auto;
+    border: none;
+    border-radius: 0.3em;
+    box-shadow: 0 1em 3em rgba(0,0,0,0.4);
+}
+
+.modal-example .multi-select-menuitem {
+    font-size: 1em;
+    padding: 1.5em 2.5em 1.5em 3.5em;
+}
+
+.modal-example .multi-select-menuitem + .multi-select-menuitem {
+    padding-top: 0;
+}
+
+.modal-example .multi-select-menuitem input {
+    margin-left: -2.5em;
+}
+
+.multi-select-modal {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    background: rgba(0, 0, 0, 0.4);
+    display: none;
+}
+
+.multi-select-container--open .multi-select-modal {
+    display: block;
+}
